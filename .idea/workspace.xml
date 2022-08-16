@@ -4,18 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df87c9ba-1eb9-497e-a100-1ac52e382c72" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/userservice/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/configs/pet/app.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/configs/pet/test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/configs/user/app.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/configs/user/test.properties" afterDir="false" />
+    <list default="true" id="df87c9ba-1eb9-497e-a100-1ac52e382c72" name="Changes" comment="First Push">
+      <change afterPath="$PROJECT_DIR$/allure-results/104134bf-e775-4c53-a8d4-098d80e7b0ec-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/136e65c0-9ae6-422c-9215-d5dc77c6bd99-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/1cdfbcad-2a7e-4841-a0c3-512c1ccc4523-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/1dcdfc44-6ad2-405f-ae2e-24fe61f94c92-attachment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/1e0c7318-8a3a-4098-823b-28884800866b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/2afe2d39-3734-4fda-928b-11322e6107d2-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/382147b0-a695-40b6-9f7b-d0014fb0bb1f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/87a6f143-eec0-4d6f-aacf-fb0dbd2e36d0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/958bb825-5518-4c16-a302-bdbc852c46e8-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/a0b0ac0f-68c8-43b3-8398-7a95963ba2ca-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/b5705c94-7193-4666-a598-a92a51bf89dc-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/d0cb9580-17d6-4e05-8c99-ea8e99e7f3e5-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/e4563755-d4dd-4cbc-8e38-73f6bd03e95f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ec3f6c3b-8ce6-41d8-ae56-55bb7922514f-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/allure-results/ed5b84c0-3773-44fb-85c1-e843e3aaa577-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/contracts/UserModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/userservice/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/userservice/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,13 +46,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2DReISFXTfwkNcx0RNnqIS5gDOz" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
@@ -51,6 +64,49 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Downloads\APIAutomationProject\APIAutomationProject\src\test\resources\configs\pet" />
     </key>
+  </component>
+  <component name="RunManager" selected="TestNG.Tests.getUser_checkResponseOk">
+    <configuration name="Tests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.petstore.user.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.petstore.user.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.petstore.user.tests.Tests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tests.getUser_checkResponseOk" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.petstore.user.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.petstore.user.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.petstore.user.tests.Tests" />
+      <option name="METHOD_NAME" value="getUser_checkResponseOk" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.Tests.getUser_checkResponseOk" />
+        <item itemvalue="TestNG.Tests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,6 +117,14 @@
       <option name="presentableId" value="Default" />
       <updated>1660666246951</updated>
     </task>
+    <task id="LOCAL-00001" summary="First Push">
+      <created>1660671908575</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660671908575</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -73,5 +137,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="First Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Push" />
   </component>
 </project>

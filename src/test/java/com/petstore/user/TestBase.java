@@ -1,6 +1,7 @@
 package com.petstore.user;
 
 import com.petstore.user.userservice.UserService;
+import org.testng.annotations.BeforeSuite;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class TestBase {
         Properties testProperties = null;
 
         try{
-            fis = new FileInputStream("/src/test/resources/configs/user/app.properties");
+            fis = new FileInputStream("src/test/resources/configs/user/app.properties");
             testProperties = new Properties();
             testProperties.load(fis);
         }catch(Exception e){
@@ -41,7 +42,7 @@ public class TestBase {
         Properties testProperties = null;
 
         try{
-            fis = new FileInputStream("/src/test/resources/configs/user/test.properties");
+            fis = new FileInputStream("src/test/resources/configs/user/test.properties");
             testProperties = new Properties();
             testProperties.load(fis);
         }catch(Exception e){
@@ -55,5 +56,11 @@ public class TestBase {
         }catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    @BeforeSuite
+    public void beforeSuiteMethod(){
+        readAppProperties();
+        readTestProperties();
     }
 }

@@ -17,6 +17,8 @@
         <lombok.version>1.18.24</lombok.version>
         <log4j.version>2.18.0</log4j.version>
         <allure.restassured.version>2.19.0</allure.restassured.version>
+        <hamcrest.version>2.2</hamcrest.version>
+        <shazamcrest.version>0.11</shazamcrest.version>
     </properties>
 
     <dependencies>
@@ -59,6 +61,20 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-rest-assured</artifactId>
             <version>${allure.restassured.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.shazam/shazamcrest -->
+        <dependency>
+            <groupId>com.shazam</groupId>
+            <artifactId>shazamcrest</artifactId>
+            <version>${shazamcrest.version}</version>
+            <scope>test</scope>
         </dependency>
 
 

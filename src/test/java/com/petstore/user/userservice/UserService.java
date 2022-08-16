@@ -27,6 +27,20 @@ public class UserService {
         return userApiRequest("user/createWithArray", Method.POST, requestSpecification)
                 .then().extract().response();
     }
+
+    /**
+     * user/{username} - method that returns the details of an user based on the given String for the pathParam
+     * @param username
+     * @return {@Link Response}
+     */
+    public Response getUser(String username){
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.contentType(ContentType.JSON);
+        requestSpecification.pathParam("username",username);
+
+        return userApiRequest("user/{username}",Method.GET, requestSpecification)
+                .then().extract().response();
+    }
     public static UserService getInstance(){return userServiceInstance;}
 
 
@@ -35,7 +49,7 @@ public class UserService {
      * @param methodName - the name of the method used for the request(Ex: /user/createWithArray)
      * @param httpMethod  - the type of the HTTP method used for the request (Ex: GET/POST)*
      * @param requestSpecification additional Request Specification to be used in the request (Ex: body data)
-     * @return
+     * @return {@Link Response}
      */
     private Response userApiRequest(String methodName, Method httpMethod, RequestSpecification requestSpecification){
         final String userServiceApiBaseUrl = TestBase.userServiceBaseUrl;
