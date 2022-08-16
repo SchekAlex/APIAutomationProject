@@ -1,6 +1,7 @@
 package com.petstore.user.userservice;
 
 import com.petstore.user.TestBase;
+import com.petstore.user.contracts.UserModel;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -20,9 +21,10 @@ public class UserService {
     private static final Logger logger = LogManager.getLogger();
     private UserService(){}
 
-    public Response postCreateWithArray(){
+    public Response postCreateWithArray(UserModel userModel){
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
+        requestSpecification.body(userModel);
 
         return userApiRequest("user/createWithArray", Method.POST, requestSpecification)
                 .then().extract().response();

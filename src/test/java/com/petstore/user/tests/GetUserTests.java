@@ -8,7 +8,7 @@ import static com.shazam.shazamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 
-public class UserTests extends TestBase {
+public class GetUserTests extends TestBase {
 
 
 

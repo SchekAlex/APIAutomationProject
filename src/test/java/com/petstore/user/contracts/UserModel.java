@@ -29,12 +29,14 @@ public class UserModel {
 
         public static UserModel buildFullUser(){
             return buildEmptyUser()
+                    .setId(1)
                     .setUsername("User1")
                     .setFirstName("Eu")
                     .setLastName("Tot Eu")
                     .setEmail("random@email.com")
                     .setPassword("randomp@ssw0rd")
-                    .setPhone("0733444555");
+                    .setPhone("0733444555")
+                    .setUserStatus(1);
         }
     }
 }
