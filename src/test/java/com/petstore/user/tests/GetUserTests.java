@@ -16,7 +16,7 @@ public class GetUserTests extends TestBase {
     /* Negative Tests */
     @Test(description = "Check that for an non-existent user the status code is 404")
     public void getNonExistingUser_checkResponseOk(){
-        Response userResponse = userApiService.getUser("user1");
+        Response userResponse = userApiService.getUser("user"+Math.random());
 
         assertThat("Wrong status code, expected 404, but was: " + userResponse.getStatusCode(),
                 userResponse.getStatusCode(), equalTo(404));
