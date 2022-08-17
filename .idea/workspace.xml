@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df87c9ba-1eb9-497e-a100-1ac52e382c72" name="Changes" comment="First Working Test">
-      <change afterPath="$PROJECT_DIR$/allure-results/31884ae3-9607-4b10-b07c-94e93c4c656d-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/37fe5641-c61b-4fd1-b1fc-521f699e71fa-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/67a94596-ec45-4d66-9404-6a767b92b92e-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/99e8383e-dfbb-4184-ae11-c357ef5154e1-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/bb5775a3-5884-46a4-a49a-ce4686387a3a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/allure-results/c3faadd8-b4a5-40ec-8052-977f6e3cd8d6-attachment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/PostUserCreateWithArrayAndList.java" afterDir="false" />
+    <list default="true" id="df87c9ba-1eb9-497e-a100-1ac52e382c72" name="Changes" comment="First Post Test gotta figure it out">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/contracts/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/contracts/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/GetUserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/GetUserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/GetUserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/PostUserCreateWithArrayAndList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/PostUserCreateWithArrayAndList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/userservice/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/userservice/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,19 +37,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Downloads\APIAutomationProject\APIAutomationProject\src\test\resources\configs\pet" />
     </key>
   </component>
   <component name="RunManager" selected="TestNG.PostUserCreateWithArrayAndList">
+    <configuration name="GetUserTests.getNonExistingUser_checkResponseOk" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.petstore.user.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.petstore.user.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.petstore.user.tests.GetUserTests" />
+      <option name="METHOD_NAME" value="getNonExistingUser_checkResponseOk" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PostUserCreateWithArrayAndList" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APIAutomationProject" />
       <extension name="coverage">
@@ -91,23 +103,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="APIAutomationProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.petstore.user.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.petstore.user.tests" />
-      <option name="MAIN_CLASS_NAME" value="com.petstore.user.tests.Tests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tests.getUser_checkResponseOk" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="APIAutomationProject" />
       <extension name="coverage">
@@ -126,12 +121,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="com.petstore.user" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.petstore.user.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.petstore.user" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.PostUserCreateWithArrayAndList" />
         <item itemvalue="TestNG.PostUserCreateWithArrayAndList.postCreateWithArray_checkResponseOk" />
+        <item itemvalue="TestNG.com.petstore.user" />
+        <item itemvalue="TestNG.GetUserTests.getNonExistingUser_checkResponseOk" />
         <item itemvalue="TestNG.Tests.getUser_checkResponseOk" />
-        <item itemvalue="TestNG.Tests" />
       </list>
     </recent_temporary>
   </component>
@@ -158,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660676167059</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="First Post Test gotta figure it out">
+      <created>1660677843090</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1660677843090</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +195,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="First Push" />
     <MESSAGE value="First Working Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Working Test" />
+    <MESSAGE value="First Post Test gotta figure it out" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Post Test gotta figure it out" />
   </component>
 </project>

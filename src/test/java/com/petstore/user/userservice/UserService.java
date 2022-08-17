@@ -13,6 +13,9 @@ import io.restassured.specification.RequestSpecification;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static io.restassured.RestAssured.given;
 
 
@@ -21,14 +24,23 @@ public class UserService {
     private static final Logger logger = LogManager.getLogger();
     private UserService(){}
 
-    public Response postCreateWithArray(UserModel userModel){
+    public static UserService getInstance(){return userServiceInstance;}
+
+
+    /**
+     *
+     * @param userModel - an ArrayList of userModel defined in the contracts package
+     * @return {@Link Response}
+     */
+    public Response postCreateWithArray(List<UserModel> userModel){
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.body(userModel);
 
-        return userApiRequest("user/createWithArray", Method.POST, requestSpecification)
+        return userApiRequest("/createWithArray", Method.POST, requestSpecification)
                 .then().extract().response();
     }
+
 
     /**
      * user/{username} - method that returns the details of an user based on the given String for the pathParam
@@ -40,12 +52,9 @@ public class UserService {
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.pathParam("username",username);
 
-        return userApiRequest("user/{username}",Method.GET, requestSpecification)
+        return userApiRequest("/{username}",Method.GET, requestSpecification)
                 .then().extract().response();
     }
-    public static UserService getInstance(){return userServiceInstance;}
-
-
     /**
      * Main method for making requests with Rest Assured to "UserServiceApi" User Calls
      * @param methodName - the name of the method used for the request(Ex: /user/createWithArray)

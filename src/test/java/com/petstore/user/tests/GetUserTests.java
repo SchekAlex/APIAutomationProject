@@ -21,7 +21,7 @@ public class GetUserTests extends TestBase {
         assertThat("Wrong status code, expected 404, but was: " + userResponse.getStatusCode(),
                 userResponse.getStatusCode(), equalTo(404));
 
-        assertThat("Wrong body, expected: '<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><apiResponse><message>null for uri: http://petstore.swagger.io/v2/user/user/user1</message><type>unknown</type></apiResponse>' , but was: " + userResponse.getBody().asString(),
-                userResponse.getBody().asString(), equalTo("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?><apiResponse><message>null for uri: http://petstore.swagger.io/v2/user/user/user1</message><type>unknown</type></apiResponse>"));
+        assertThat("Wrong body, expected: '{\"code\":1,\"type\":\"error\",\"message\":\"User not found\"}' , but was: " + userResponse.getBody().asString(),
+                userResponse.getBody().asString(), equalTo("{\"code\":1,\"type\":\"error\",\"message\":\"User not found\"}"));
     }
 }

@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserModel {
-    private int id;
+    private Long id;
     private String username;
     private String firstName;
     private String lastName;
@@ -29,14 +29,14 @@ public class UserModel {
 
         public static UserModel buildFullUser(){
             return buildEmptyUser()
-                    .setId(1)
-                    .setUsername("User1")
-                    .setFirstName("Eu")
-                    .setLastName("Tot Eu")
-                    .setEmail("random@email.com")
-                    .setPassword("randomp@ssw0rd")
+                    .setId(0L)
+                    .setUsername("User1"+Math.random())
+                    .setFirstName("Eu"+Math.random())
+                    .setLastName("Tot Eu"+Math.random())
+                    .setEmail("random"+Math.random()+"@email.com")
+                    .setPassword("randomp@ssw0rd"+Math.random())
                     .setPhone("0733444555")
-                    .setUserStatus(1);
+                    .setUserStatus(0);
         }
     }
 }
