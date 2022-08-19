@@ -17,9 +17,9 @@ public class DeleteUsers extends TestBase {
     List<UserModel> listOfUserModels = new ArrayList<>();
 
     @Test(description = "Delete user and check if the user was deleted")
-    public void deleteUser(){
+    public void deleteUser() {
         listOfUserModels.add(UserModel.UserModelBuilder.buildFullUser());
-        Response loginWithAutoUser = userApiService.loginUser(userModelListTestBase.get(0).getUsername(),userModelListTestBase.get(0).getPassword());
+        Response loginWithAutoUser = userApiService.loginUser(userModelListTestBase.get(0).getUsername(), userModelListTestBase.get(0).getPassword());
 
         assertThat("Wrong status code,expected 200, but was: " + loginWithAutoUser.getStatusCode(),
                 loginWithAutoUser.getStatusCode(), equalTo(200));
@@ -41,7 +41,7 @@ public class DeleteUsers extends TestBase {
         assertThat("Content is the correct type.",
                 deleteUser.getContentType(), equalTo("application/json"));
         assertThat("Check the body to contain the right user",
-                deleteUser.getBody().asString(), equalTo("{\"code\":200,\"type\":\"unknown\",\"message\":\""+listOfUserModels.get(0).getUsername()+"\"}"));
+                deleteUser.getBody().asString(), equalTo("{\"code\":200,\"type\":\"unknown\",\"message\":\"" + listOfUserModels.get(0).getUsername() + "\"}"));
 
         Response searchForUser = userApiService.getUser(listOfUserModels.get(0).getUsername());
 
@@ -50,6 +50,6 @@ public class DeleteUsers extends TestBase {
         assertThat("Content is the correct type.",
                 searchForUser.getContentType(), equalTo("application/json"));
         assertThat("Check the body",
-                searchForUser.getBody().asString(),equalTo("{\"code\":1,\"type\":\"error\",\"message\":\"User not found\"}"));
+                searchForUser.getBody().asString(), equalTo("{\"code\":1,\"type\":\"error\",\"message\":\"User not found\"}"));
     }
 }

@@ -17,9 +17,9 @@ public class PutUpdateUser extends TestBase {
     List<UserModel> listOfUserModels = new ArrayList<>();
 
     @Test(description = "Update a user and verify the modifications")
-    public void putUpdateUser_checkResponseOk(){
+    public void putUpdateUser_checkResponseOk() {
         listOfUserModels.add(UserModel.UserModelBuilder.buildFullUser());
-        Response loginWithAutoUser = userApiService.loginUser(userModelListTestBase.get(0).getUsername(),userModelListTestBase.get(0).getPassword());
+        Response loginWithAutoUser = userApiService.loginUser(userModelListTestBase.get(0).getUsername(), userModelListTestBase.get(0).getPassword());
 
         assertThat("Wrong status code,expected 200, but was: " + loginWithAutoUser.getStatusCode(),
                 loginWithAutoUser.getStatusCode(), equalTo(200));
@@ -37,7 +37,7 @@ public class PutUpdateUser extends TestBase {
 
         listOfUsersToBeChanged.get(0).setUsername("ChangedName").setFirstName("Changed").setLastName("Name");
 
-        Response updateUser = userApiService.putUpdateUser(listOfUsersToBeChanged,listOfUserModels.get(0).getUsername());
+        Response updateUser = userApiService.putUpdateUser(listOfUsersToBeChanged, listOfUserModels.get(0).getUsername());
 
         assertThat("Wrong status code,expected 200, but was: " + updateUser.getStatusCode(),
                 updateUser.getStatusCode(), equalTo(200));

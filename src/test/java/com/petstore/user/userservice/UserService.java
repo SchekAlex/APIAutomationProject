@@ -23,18 +23,22 @@ import static io.restassured.RestAssured.given;
 public class UserService {
     private static final UserService userServiceInstance = new UserService();
     private static final Logger logger = LogManager.getLogger();
-    private UserService(){}
 
-    public static UserService getInstance(){return userServiceInstance;}
+    private UserService() {
+    }
 
+    public static UserService getInstance() {
+        return userServiceInstance;
+    }
 
 
     /**
      * Method - POST /user/createWithList
+     *
      * @param userModel
      * @return {@Link Response}
      */
-    public Response postCreateWithList(List<UserModel> userModel){
+    public Response postCreateWithList(List<UserModel> userModel) {
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.body(userModel);
@@ -42,12 +46,14 @@ public class UserService {
         return userApiRequest("/createWithList", Method.POST, requestSpecification)
                 .then().extract().response();
     }
+
     /**
      * Method - POST /user/createWithArray
+     *
      * @param userModel - an ArrayList of userModel defined in the contracts package
      * @return {@Link Response}
      */
-    public Response postCreateWithArray(List<UserModel> userModel){
+    public Response postCreateWithArray(List<UserModel> userModel) {
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.body(userModel);
@@ -58,23 +64,26 @@ public class UserService {
 
     /**
      * Method - POST /user - create User only while logged in
+     *
      * @param userModel
      * @return
      */
-    public Response postCreateUser (UserModel userModel){
+    public Response postCreateUser(UserModel userModel) {
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.body(userModel);
 
-        return userApiRequest("",Method.POST,requestSpecification)
+        return userApiRequest("", Method.POST, requestSpecification)
                 .then().extract().response();
     }
+
     /**
      * Method - PUT /user/{username}
+     *
      * @param userModel
      * @return
      */
-    public Response putUpdateUser(List<UserModel> userModel,String username){
+    public Response putUpdateUser(List<UserModel> userModel, String username) {
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.pathParam("username", username);
@@ -86,25 +95,27 @@ public class UserService {
 
     /**
      * Method - DELETE /user/{username}
+     *
      * @param username
      * @return
      */
-    public Response deleteUser(String username){
+    public Response deleteUser(String username) {
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.pathParam("username", username);
 
-        return userApiRequest("/{username}",Method.DELETE, requestSpecification)
+        return userApiRequest("/{username}", Method.DELETE, requestSpecification)
                 .then().extract().response();
     }
 
     /**
      * Method - GET /user/login
+     *
      * @param username
      * @param password
      * @return
      */
-    public Response loginUser(String username, String password){
+    public Response loginUser(String username, String password) {
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
         requestSpecification.queryParam("username", username);
@@ -116,9 +127,10 @@ public class UserService {
 
     /**
      * Method - GET /user/logout
+     *
      * @return
      */
-    public Response logoutUser(){
+    public Response logoutUser() {
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
 
@@ -128,29 +140,32 @@ public class UserService {
 
     /**
      * Method - GET user/{username} - method that returns the details of an user based on the given String for the pathParam
+     *
      * @param username
      * @return {@Link Response}
      */
-    public Response getUser(String username){
+    public Response getUser(String username) {
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
-        requestSpecification.pathParam("username",username);
+        requestSpecification.pathParam("username", username);
 
-        return userApiRequest("/{username}",Method.GET, requestSpecification)
+        return userApiRequest("/{username}", Method.GET, requestSpecification)
                 .then().extract().response();
     }
+
     /**
      * Main method for making requests with Rest Assured to "UserServiceApi" User Calls
-     * @param methodName - the name of the method used for the request(Ex: /user/createWithArray)
-     * @param httpMethod  - the type of the HTTP method used for the request (Ex: GET/POST)*
+     *
+     * @param methodName           - the name of the method used for the request(Ex: /user/createWithArray)
+     * @param httpMethod           - the type of the HTTP method used for the request (Ex: GET/POST)*
      * @param requestSpecification additional Request Specification to be used in the request (Ex: body data)
      * @return {@Link Response}
      */
-    private Response userApiRequest(String methodName, Method httpMethod, RequestSpecification requestSpecification){
+    private Response userApiRequest(String methodName, Method httpMethod, RequestSpecification requestSpecification) {
         final String userServiceApiBaseUrl = TestBase.userServiceBaseUrl;
-        logger.info("Request Base URL: "+ httpMethod + " " + userServiceApiBaseUrl + "/" + methodName);
+        logger.info("Request Base URL: " + httpMethod + " " + userServiceApiBaseUrl + "/" + methodName);
 
-        requestSpecification.header("X-TrackerContext-Caller","UserServiceApiTesting");
+        requestSpecification.header("X-TrackerContext-Caller", "UserServiceApiTesting");
         requestSpecification.header("X-TrackerContext-CallerIdentifier", "ApiTesting-UserService");
 
         return given()
@@ -159,7 +174,7 @@ public class UserService {
                 .filter(new ResponseLoggingFilter(System.out))
                 .spec(requestSpecification)
                 .baseUri(userServiceApiBaseUrl)
-                .when().request(httpMethod,methodName)
+                .when().request(httpMethod, methodName)
                 .then().extract().response();
 
     }

@@ -31,18 +31,18 @@ public class TestBase {
     public static String userServiceBaseUrl;
 
     @BeforeSuite
-    public void beforeSuiteMethod(){
+    public void beforeSuiteMethod() {
         readAppProperties();
         readTestProperties();
         createUsersForTests();
     }
 
     @AfterSuite
-    public void afterSuiteMethod(){
+    public void afterSuiteMethod() {
         logoutUser();
     }
 
-    private void createUsersForTests(){
+    private void createUsersForTests() {
         userModelListTestBase.add(UserModel.UserModelBuilder.buildEmptyUser()
                 .setUsername(username)
                 .setFirstName(firstName)
@@ -54,49 +54,49 @@ public class TestBase {
         Response createWithArrayUser = userApiService.postCreateWithArray(userModelListTestBase);
 
         assertThat("Wrong status code, expected 200, but was: " + createWithArrayUser.getStatusCode(),
-                createWithArrayUser.getStatusCode(),equalTo(200));
+                createWithArrayUser.getStatusCode(), equalTo(200));
         assertThat("Content is the correct type", createWithArrayUser.getContentType(), equalTo("application/json"));
 
 
     }
 
-    private void logoutUser(){
+    private void logoutUser() {
         userApiService.logoutUser();
     }
 
     /* Taking values from the properties file */
-    private void readAppProperties(){
+    private void readAppProperties() {
         FileInputStream fis = null;
         Properties testProperties = null;
 
-        try{
+        try {
             fis = new FileInputStream("src/test/resources/configs/user/app.properties");
             testProperties = new Properties();
             testProperties.load(fis);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
         userServiceBaseUrl = testProperties.getProperty("baseUrl");
 
-        try{
-            if(fis!=null){
+        try {
+            if (fis != null) {
                 fis.close();
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private void readTestProperties(){
+    private void readTestProperties() {
         FileInputStream fis = null;
         Properties testProperties = null;
 
-        try{
+        try {
             fis = new FileInputStream("src/test/resources/configs/user/test.properties");
             testProperties = new Properties();
             testProperties.load(fis);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -107,15 +107,14 @@ public class TestBase {
         password = testProperties.getProperty("password");
         phone = testProperties.getProperty("phone");
 
-        try{
-            if(fis!=null){
+        try {
+            if (fis != null) {
                 fis.close();
             }
-        }catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-
 
 
 }

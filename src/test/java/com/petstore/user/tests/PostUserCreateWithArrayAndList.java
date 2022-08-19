@@ -17,7 +17,7 @@ public class PostUserCreateWithArrayAndList extends TestBase {
     List<UserModel> listOfUserModels = new ArrayList<>();
 
     @Test(description = "PostUserCreateWithArray and check response")
-    public void postCreateWithArray_checkResponseOk(){
+    public void postCreateWithArray_checkResponseOk() {
         listOfUserModels.add(UserModel.UserModelBuilder.buildFullUser());
         Response postUserResponse = userApiService.postCreateWithArray(listOfUserModels);
 
@@ -52,7 +52,7 @@ public class PostUserCreateWithArrayAndList extends TestBase {
     }
 
     @Test(description = "PostUserCreateWithList and check response")
-    public void postCreateWithList_checkResponseOk(){
+    public void postCreateWithList_checkResponseOk() {
         listOfUserModels.add(UserModel.UserModelBuilder.buildFullUser());
         Response postUserResponse = userApiService.postCreateWithList(listOfUserModels);
 

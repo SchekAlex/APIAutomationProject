@@ -16,9 +16,9 @@ public class GetCreateUser extends TestBase {
     List<UserModel> listOfUserModels = new ArrayList<>();
 
     @Test(description = "Create a new user while logged in with the Automation User and check that all the data is correct")
-    public void createUser_checkResponseOk(){
+    public void createUser_checkResponseOk() {
         listOfUserModels.add(UserModel.UserModelBuilder.buildFullUser());
-        Response loginWithAutoUser = userApiService.loginUser(userModelListTestBase.get(0).getUsername(),userModelListTestBase.get(0).getPassword());
+        Response loginWithAutoUser = userApiService.loginUser(userModelListTestBase.get(0).getUsername(), userModelListTestBase.get(0).getPassword());
 
         assertThat("Wrong status code,expected 200, but was: " + loginWithAutoUser.getStatusCode(),
                 loginWithAutoUser.getStatusCode(), equalTo(200));
