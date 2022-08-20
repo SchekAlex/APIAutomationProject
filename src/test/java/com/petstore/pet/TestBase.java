@@ -13,6 +13,9 @@ public class TestBase {
     /* Variables for making requests*/
     public String petServiceBaseUrl;
 
+    /* Variables for test data*/
+    public String apiKey;
+
 
     @BeforeSuite
     public void beforeMethod(){

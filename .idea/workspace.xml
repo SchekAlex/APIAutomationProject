@@ -4,21 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df87c9ba-1eb9-497e-a100-1ac52e382c72" name="Changes" comment="Added new tests for the rest of the user methods">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/pet/TestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/pet/contracts/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/pet/contracts/PetModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/pet/contracts/Tags.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/pet/petservice/PetService.java" afterDir="false" />
+    <list default="true" id="df87c9ba-1eb9-497e-a100-1ac52e382c72" name="Changes" comment="Started adding stuff for the pet part">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/store/TestBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/petstore/store/contracts/StoreModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/TestBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/DeleteUsers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/DeleteUsers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/GetCreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/GetCreateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/GetUserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/GetUserTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/PostUserCreateWithArrayAndList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/PostUserCreateWithArrayAndList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/PutUpdateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/tests/PutUpdateUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/user/userservice/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/user/userservice/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/pet/app.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/pet/app.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/pet/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/pet/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/petstore/pet/petservice/PetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/petstore/pet/petservice/PetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/configs/pet/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configs/pet/test.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660756974634</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Started adding stuff for the pet part">
+      <created>1660921235996</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660921235996</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +219,7 @@
     <MESSAGE value="First Post Test gotta figure it out" />
     <MESSAGE value="Figured it out with the post test, take care when adding new methods" />
     <MESSAGE value="Added new tests for the rest of the user methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new tests for the rest of the user methods" />
+    <MESSAGE value="Started adding stuff for the pet part" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started adding stuff for the pet part" />
   </component>
 </project>

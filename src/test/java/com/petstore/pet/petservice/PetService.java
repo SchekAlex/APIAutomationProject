@@ -15,6 +15,7 @@ import org.codehaus.groovy.runtime.callsite.PerInstancePojoMetaClassSite;
 import org.junit.runner.Request;
 
 import java.io.File;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -62,6 +63,13 @@ public class PetService {
                 .then().extract().response();
     }
 
+    /**
+     *
+     * @param petId
+     * @param name
+     * @param status
+     * @return
+     */
     public Response postPetId(Integer petId, String name, String status){
         RequestSpecification requestSpecification = RestAssured.given();
         requestSpecification.contentType(ContentType.JSON);
@@ -73,6 +81,66 @@ public class PetService {
                 .then().extract().response();
 
     }
+
+    /**
+     *
+     * @param petModel
+     * @return
+     */
+    public Response putPetUpdate(PetModel petModel){
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.contentType(ContentType.JSON);
+
+        return petApiRequest("", Method.PUT, requestSpecification)
+                .then().extract().response();
+    }
+
+    /**
+     *
+     * @param listOfPetModel
+     * @param status
+     * @return
+     */
+    public Response getFindPetByStatus(List<PetModel> listOfPetModel,List<String> status){
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.contentType(ContentType.JSON);
+        requestSpecification.queryParam("status", status);
+        requestSpecification.body(listOfPetModel);
+
+        return petApiRequest("/findByStatus", Method.GET,requestSpecification)
+                .then().extract().response();
+    }
+
+    /**
+     *
+     * @param petId
+     * @return
+     */
+    public Response getFindPetById(Integer petId){
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.contentType(ContentType.JSON);
+        requestSpecification.pathParam("petId", petId);
+
+        return petApiRequest("/{petId}",Method.GET, requestSpecification)
+                .then().extract().response();
+
+    }
+
+    /**
+     *
+     * @param api_key
+     * @param petId
+     * @return
+     */
+    public Response deletePet(String api_key,Integer petId){
+        RequestSpecification requestSpecification = RestAssured.given();
+        requestSpecification.header("api_key",api_key);
+        requestSpecification.pathParam("petId",petId);
+
+        return petApiRequest("/{petId}",Method.GET,requestSpecification)
+                .then().extract().response();
+    }
+
     /**
      * Main method for making requests with Rest Assured to "UserServiceApi" User Calls
      *
